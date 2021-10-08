@@ -33,6 +33,11 @@ dependencies {
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.11.2")
   testImplementation("io.kotest:kotest-runner-junit5-jvm:$kotestVersion")
   testImplementation("io.kotest:kotest-runner-console-jvm:$kotestVersion")
+  // health check
+  implementation("org.springframework.boot:spring-boot-starter-actuator")
+  implementation("io.micrometer:micrometer-registry-prometheus")
+  // OpenAPI
+  implementation("org.springdoc:springdoc-openapi-ui:1.5.9")
 }
 
 tasks.withType<Test> {
